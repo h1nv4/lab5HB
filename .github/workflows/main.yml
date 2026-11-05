@@ -1,4 +1,4 @@
-name: lab5
+name: CI Workflow
 
 on:
   push:
@@ -8,4 +8,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Uruchomienie skryptu
+      - name: Pobranie repozytorium
+        uses: actions/checkout@v4
+
+      - name: Test uruchomienia
+        run: echo "GitHub Action dziala poprawnie!"
